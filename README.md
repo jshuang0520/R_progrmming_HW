@@ -1,1 +1,1 @@
-# This is Johnson's R-progrmming HW
+# 黃聖翔 R程式設計 作業
