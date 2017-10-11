@@ -39,8 +39,7 @@
 
 
 
-### 推薦學習資源/書籍
+### 推薦學習資源
 
 - [輕鬆學習 R 語言 - 紙本書](http://www.books.com.tw/products/0010763975)
 
-- [輕鬆學習 R 語言 - 網頁版](http://www.learn-r-the-easy-way.tw)
