@@ -1,6 +1,8 @@
-# R_progrmming
+## R progrmming
 
-這是[黃聖翔](https://www.facebook.com/profile.php?id=100001348802783)在台大系統訓練班 第288期-R程式設計，所完成的指定作業項目，[網頁版](https://jshuang0520.github.io/R_progrmming_HW/)
+### 簡介
+
+這是[黃聖翔](https://www.facebook.com/profile.php?id=100001348802783)在[台灣大學資訊工程學系資訊系統訓練班](https://www.csie.ntu.edu.tw/train/) 第288期-R程式設計，所完成的期中作業，[網頁版](https://jshuang0520.github.io/R_progrmming_HW/)
 
 
 
