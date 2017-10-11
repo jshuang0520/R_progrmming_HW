@@ -8,7 +8,7 @@ output: html_document
 ### 台大系統訓練班 r_programming 第2次期中作業 :
 
 ###用一個 2x2 的畫布練習使用 Base plotting system 繪製任意四個不同圖形
-```{r, echo = TRUE, warning=FALSE, error=FALSE}
+```{r, echo = FALSE, warning=FALSE, error=FALSE}
 par(mfrow = c(2,2)) #切成左右 ->2個row, 2個column
 #-------------------------------------
 hist(rnorm(3000), col = "red")
