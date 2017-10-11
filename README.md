@@ -8,18 +8,6 @@
 ### 大綱
 
 
-|編號|章節 / 作業內容|
-|-------|---|
-|1|[單一變數與函數](https://jshuang0520.github.io/R_progrmming_HW/2017.08.21_R_CH2_HW1.html)|
-|2|[簡單的繪圖（Base plotting system）](https://jshuang0520.github.io/R_progrmming_HW/2017.08.23_R_CH3_HW2.html)|
-|3|[簡單的繪圖（ggplot2）](https://jshuang0520.github.io/R_progrmming_HW/2017.08.24_R_CH5_HW3.html)|
-|4|[迴圈與流程控制](https://jshuang0520.github.io/R_progrmming_HW/2017.08.29_R_CH8_HW4.html)|
-|5|[自訂函數](https://jshuang0520.github.io/R_progrmming_HW/2017.08.30_R_CH9_HW5.html)|
-
-
-
-
-
 
 - [單一變數與函數](https://jshuang0520.github.io/R_progrmming_HW/2017.08.21_R_CH2_HW1.html)
 
