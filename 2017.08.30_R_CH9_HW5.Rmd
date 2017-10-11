@@ -1,0 +1,81 @@
+---
+title: "r_programming : 自訂函數"
+author: "Huang Sheng-Hsiang"
+date: "2017年8月30日"
+output: html_document
+---
+
+### 台大系統訓練班 r_programming 第4次期中作業 :
+
+### 統整你的 my.length() 與 my.sum() 函數把 sd() 函數實作出來
+
+```{r, echo = TRUE, warning=FALSE, error=FALSE}
+#模組化方法 :
+#在呼叫函數前，先宣告輸入 : 
+fib_generator <- function(x, y, n){
+   f1 <- x
+   f2 <- y
+   fib <- c(f1, f2)
+   for (i in 3:n) {    #不是for(i in 1:n)，不是1到n喔!不然會多2項!
+      f3 <- f1 + f2
+      fib <- c(fib, f3)
+      f1 <- f2
+      f2 <- f3
+   }
+   return(fib)
+}
+Fibonacci <- fib_generator(30, 35, 11)   #class(Fibonacci)     [1] "numeric"
+input_vector <- c(Fibonacci)
+# 定義 my.length() 函數
+my.length <- function(input_vector) {
+   count <- 0
+   for (i in input_vector) {
+      count <- count + 1
+   }
+   return(count)
+}
+#定義n
+n <- my.length(input_vector)
+# 定義 my.sum() 函數
+my.sum <- function(input_vector) {
+   my_sum <- 0
+   for (i in input_vector) {
+      my_sum <- my_sum + i
+   }
+   return(my_sum)
+}
+# 定義 my.mean() 函數
+my.mean <- function(input_vector){
+   my_mean_function <- my.sum(input_vector) / my.length(input_vector)
+   return(my_mean_function)
+}
+#定義x_bar
+x_bar <- my.mean(input_vector)
+#定義SSE
+SSE <- 0   #---------------------------千萬記得要先做出可以儲存加總迭代的東西!!!!
+for (i in input_vector) {
+   SSE <- SSE + my.sum(  (x_bar - i)**2  )  #--------------迭代加總結果的手法
+}
+#最後定義my.sd 和 SD
+my.sd <- function(input_vector){
+   return( (SSE / (n - 1))**0.5 )
+}
+SD <- my.sd(input_vector)
+
+n     #元素個數
+x_bar #平均數
+SSE   #sum of squared errors
+SD    #標準差
+
+input_vector <- c(input_vector)
+The_number_of_elements <- c(n)
+x_bar <- c(x_bar)
+SSE <- c(SSE)
+SD <- c(SD)
+
+vector_information_df <- data.frame(The_number_of_elements, x_bar, SSE, SD)
+View(vector_information_df)
+
+vector_information_list <- list(All_elements_of_input_vector = input_vector, other_information = vector_information_df)
+vector_information_list
+```

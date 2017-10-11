@@ -1,0 +1,49 @@
+---
+title: "r_programming : GGplot2"
+author: "Huang Sheng-Hsiang"
+date: "2017年8月24日"
+output: html_document
+---
+
+### 台大系統訓練班 r_programming 第3次期中作業 :
+
+### 用一個 2x2 的畫布練習使用 ggplot2 繪製任意四個圖形
+```{r, echo = TRUE, warning=FALSE, error=FALSE}
+library(ggplot2)
+library(gridExtra)
+#-------------------------------------
+gg1 <- ggplot(iris, aes(x = Petal.Length, colour = Species, fill = Species)) +
+   geom_density(alpha = 0.65)
+#-------------------------------------
+gg2 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+   geom_point() +
+   ggtitle("Sepal.Length vs. Sepal.Width") +
+   xlab("Sepal length") +
+   ylab("Sepal width")+
+   geom_smooth(method = "lm")
+#-------------------------------------
+qua_fun <- function(x){
+   return(x**2)}
+
+exp_fun <- function(x){
+   return(exp(x))}
+
+gg3_1 <- ggplot(data.frame(x = c(-3, 3.5)), aes(x))
+gg3 <- gg3_1 + stat_function(fun = qua_fun, geom = "line", col = "blue") +
+   stat_function(fun = exp_fun, geom = "line", col = "green")+
+   geom_hline(yintercept = 0, lty = 2) +
+   geom_vline(xintercept = 0, lty = 2)+
+   labs(title = "Quadratic, Exponential Function")
+#-------------------------------------
+gg4 <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
+   geom_boxplot()
+#-------------------------------------
+grid.arrange(gg1, gg2, gg3, gg4, nrow = 2, ncol = 2)
+```
+
+```{r, echo = TRUE, warning=FALSE, error=FALSE}
+# 調整aes()的參數..scaled..
+gg5 <- ggplot(iris, aes(x = Petal.Length, colour = Species, fill = Species, ..scaled..)) +
+   geom_density(alpha = 0.65)
+plot(gg5)
+```
