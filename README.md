@@ -34,3 +34,13 @@
 
 
 - [自訂函數](https://jshuang0520.github.io/R_progrmming_HW/2017.08.30_R_CH9_HW5.html)
+
+
+
+
+
+### 推薦學習資源/書籍
+
+- [輕鬆學習 R 語言 - 紙本書](http://www.books.com.tw/products/0010763975)
+
+- [輕鬆學習 R 語言 - 網頁版](http://www.learn-r-the-easy-way.tw)
